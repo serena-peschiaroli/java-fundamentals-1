@@ -12,7 +12,7 @@ public class CalcolaCibi {
         System.out.println("My top food is: " + favoriteFoods[0]);
 
         //stampa l'ultimo elemento della lista
-        System.out.println("My last favourite food is: " + favoriteFoods[6]);
+        System.out.println("My last favourite food is: " + favoriteFoods[favoriteFoods.length - 1]);
 
         //elemento in posizione mediana:
 
