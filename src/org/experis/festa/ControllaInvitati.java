@@ -35,5 +35,8 @@ public class ControllaInvitati {
         }else{
             System.out.println("sorry, " + userName + ", you're not on the list.");
         }
+
+        scanner.close();
     }
+
 }
