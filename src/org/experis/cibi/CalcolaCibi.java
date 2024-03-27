@@ -39,9 +39,10 @@ public class CalcolaCibi {
         //stampa l'ultimo elemento della lista
         System.out.println("Your last favourite food is: " + favoriteFoods[favoriteFoods.length - 1]);
 
-        //elemento in posizione mediana:
+        //elemento in posizione mediana con operatore ternario per cacolare se la lunghezza dell'array è pari o dispari ed aggiornare il valore di conseguenza
 
-        int medianPosition = favoriteFoods.length / 2;
+        int medianPosition = favoriteFoods.length % 2 == 0 ? (favoriteFoods.length / 2) - 1 : favoriteFoods.length / 2;
+
 
         System.out.println("the food in the middle of the ranking is: " + favoriteFoods[medianPosition]);
 
