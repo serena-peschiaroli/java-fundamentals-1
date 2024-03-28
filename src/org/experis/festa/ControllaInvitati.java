@@ -9,9 +9,12 @@ public class ControllaInvitati {
                 "Dua Lipa", "Paris Hilton", "Manuel Agnelli"," J-Ax", "Francesco Totti", "Ilary Blasi", "Bebe Vio", "Luis", "Pardis Zarei", "Martina Maccherone", "Rachel Zeilic"
 
         };
+
         //creare scanner per leggere user input
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Welcome to the party! What's your name?");
+
         String userName = scanner.nextLine().trim();
 
         //eseguire un loop per cercare userName nella lista degli invitati con un check case-insensitive
@@ -20,13 +23,22 @@ public class ControllaInvitati {
         /* sintassi enhanced foor loop: for (String element : array) {
                                             System.out.println(element);
                                          } */
-        for (String invitee : inviteesList) {
+       /* for (String invitee : inviteesList) {
             //case-insensitive checks
             if (invitee.equalsIgnoreCase(userName)) {
                 isInviteeFound = true;
                 //esci dal ciclo se trovato
                 break;
             }
+        } */
+
+        //con while loop:
+        int i = 0;
+        while(i < inviteesList.length && !isInviteeFound){
+            if(inviteesList[i].equalsIgnoreCase(userName)){
+                isInviteeFound = true;
+            }
+            i++;
         }
 
         //se userName è nella lista degli invitati:
