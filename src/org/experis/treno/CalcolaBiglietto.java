@@ -4,15 +4,19 @@ import java.util.Scanner;
 
 public class CalcolaBiglietto {
     public static void main(String[] args) {
+
+        final int underAge = 18;
+        final int overAge = 65;
         // creare scanner obj per prendere input
         Scanner scanner = new Scanner(System.in);
         //chiedere user input
         System.out.println("Kindly insert total kms");
-        double kilometers = scanner.nextDouble();
+
+        int kilometers = Integer.parseInt(scanner.nextLine());
         System.out.println("Km: " + kilometers);
 
         System.out.println("Please insert passengers' age");
-        int age = scanner.nextInt();
+        int age = Integer.parseInt(scanner.nextLine());
 
         //calcolare prezzo base
         double pricePerKm = 0.21;
@@ -22,11 +26,11 @@ public class CalcolaBiglietto {
         double discountRate = 0;
 
         //calcolare scontistica in base ad age
-        if(age < 18){
+        if(age < underAge){
             //20% sconto per i minorenni
             discountRate = 0.20;
 
-        } else if (age > 65) {
+        } else if (age > overAge) {
             //40% di sconto per i pensionati
             discountRate = 0.40;
 
